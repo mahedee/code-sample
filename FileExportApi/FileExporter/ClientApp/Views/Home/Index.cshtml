@@ -1,0 +1,168 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h4>Export file using asp.net web api</h4>
+<button type="button" class="btn btn-primary" id="btnExcel">Export Excel</button>
+<button type="button" class="btn btn-info" id="btnPDF">Export PDF</button>
+<button type="button" class="btn btn-success" id="btnDynamicExcel">Export Dynamic Excel</button>
+
+
+
+@* Implement Scripts section *@
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            //alert('working from document ready!!');
+        })
+
+        //Button's events
+        $("#btnExcel").click(function () {
+            //alert("Export button clicked");
+            ExcelExportar.OnExportarClick();
+        });
+
+        $("#btnPDF").click(function () {
+            //alert("Export for dynamic pdf clicked");
+            PDFExportar.OnExportarClick();
+        });
+
+        $("#btnDynamicExcel").click(function () {
+            //alert("Export button clicked");
+            DyamicExcelExportar.OnExportarClick();
+        });
+
+
+
+
+        //Excel exporter - start
+        var ExcelExportar = {
+            OnExportarClick: function () {
+                //alert('click on exporter!');
+                $.ajax({
+                    url: "https://localhost:44386/api/export/getexcel",
+                    type: 'GET',
+                    dataType: 'text',
+                    success: ExcelExportar.DownloadExcel,
+
+                    failure: function (data) {
+                        alert('failur: ' + data.responseText);
+                    }, //End of AJAX failure function
+                    error: function (request) {
+                        alert('error: ' + request.responseText);
+                    } //End of AJAX error function
+                });
+            },
+
+            DownloadExcel: function (data) {
+                //alert('download excel');
+                var createA = document.createElement('a');
+                createA.setAttribute('id', 'linkDownload');
+                createA.setAttribute('href', 'data:application/vnd.ms-excel;base64,' + data);
+                document.body.appendChild(createA);
+
+                createA.download = 'download_latest.xls';
+                var selectorHref = document.getElementById('linkDownload');
+                selectorHref.click();
+                selectorHref.remove();
+            }
+        };
+
+        //Excel exporter - End
+
+
+        //PDF exporter - start
+
+        var PDFExportar = {
+            OnExportarClick: function () {
+                //alert('click on pdf exporter!');
+                $.ajax({
+                    url: "https://localhost:44386/api/export/getpdf",
+                    type: 'GET',
+                    dataType: 'text',
+                    success: PDFExportar.DownloadPDF,
+                    failure: function (data) {
+                        alert('failur: ' + data.responseText);
+                    }, //End of AJAX failure function
+                    error: function (request) {
+                        alert('error: ' + request.responseText);
+                    } //End of AJAX error function
+                });
+            },
+
+            DownloadPDF: function (data) {
+
+                // Display in a same page with a download link
+
+                // Embed the PDF into the HTML page and show it to the user
+                var obj = document.createElement('object');
+                obj.style.width = '100%';
+                obj.style.height = '842pt';
+                obj.type = 'application/pdf';
+                obj.data = 'data:application/pdf;base64,' + data;
+                document.body.appendChild(obj);
+
+                // Insert a link that allows the user to download the PDF file
+                var link = document.createElement('a');
+                link.innerHTML = 'Download PDF file';
+                link.download = 'file.pdf';
+                link.href = 'data:application/octet-stream;base64,' + data;
+                document.body.appendChild(link);
+
+
+                // Display in a new window
+                //var objbuilder = '';
+                //objbuilder += ('<object width="100%" height="100%"      data="data:application/pdf;base64,');
+                //objbuilder += (data);
+                //objbuilder += ('" type="application/pdf" class="internal">');
+                //objbuilder += ('<embed src="data:application/pdf;base64,');
+                //objbuilder += (data);
+                //objbuilder += ('" type="application/pdf" />');
+                //objbuilder += ('</object>');
+
+                //var win = window.open("", "_blank", "titlebar=yes");
+                //win.document.title = "My Title";
+                //win.document.write('<html><body>');
+                //win.document.write(objbuilder);
+                //win.document.write('</body></html>');
+                //layer = jQuery(win.document);
+
+
+            }
+        };
+
+        //PDF exporter - end
+
+        var DyamicExcelExportar = {
+            OnExportarClick: function () {
+                $.ajax({
+                    url: "https://localhost:44386/api/export/GetDynamicExcel",
+                    type: 'GET',
+                    dataType: 'text',
+                    success: DyamicExcelExportar.DownloadExcel,
+                    failure: function (data) {
+                        alert('failur: ' + data.responseText);
+                    }, //End of AJAX failure function
+                    error: function (request) {
+                        alert('error: ' + request.responseText);
+                    } //End of AJAX error function
+                });
+            },
+
+            DownloadExcel: function (data) {
+                //alert('download excel');
+                var createA = document.createElement('a');
+                createA.setAttribute('id', 'linkDownload');
+                createA.setAttribute('href', 'data:application/vnd.ms-excel;base64,' + data);
+                document.body.appendChild(createA);
+
+                createA.download = 'download_latest.xls';
+                var selectorHref = document.getElementById('linkDownload');
+                selectorHref.click();
+                selectorHref.remove();
+            }
+        };
+
+    </script>
+}
