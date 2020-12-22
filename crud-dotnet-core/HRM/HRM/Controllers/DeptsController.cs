@@ -7,22 +7,26 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HRM.Data;
 using HRM.Models;
+using HRM.Services;
 
 namespace HRM.Controllers
 {
     public class DeptsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IDeptService _deptService;
 
-        public DeptsController(ApplicationDbContext context)
+        public DeptsController(ApplicationDbContext context, IDeptService deptService)
         {
             _context = context;
+            _deptService = deptService;
         }
 
         // GET: Depts
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Dept.ToListAsync());
+            return View(await _deptService.GetDepts());
+            //return View(await _context.Dept.ToListAsync());
         }
 
         // GET: Depts/Details/5

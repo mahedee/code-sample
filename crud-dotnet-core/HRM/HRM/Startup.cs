@@ -12,6 +12,8 @@ using HRM.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using HRM.Repository;
+using HRM.Services;
 
 namespace HRM
 {
@@ -34,6 +36,10 @@ namespace HRM
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            //Added dependency injection
+            services.AddScoped<IDeptRepository, DeptRepository>();
+            services.AddScoped<IDeptService, DeptService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
