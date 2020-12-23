@@ -20,5 +20,15 @@ namespace HRM.Services
         {
             return await _repository.GetDepts();
         }
+
+        public async Task<Dept> GetDept(int? id)
+        {
+            return await _repository.GetDept(id);
+        }
+
+        public async Task Add(Dept dept)
+        {
+            await _repository.Save(dept);
+        }
     }
 }

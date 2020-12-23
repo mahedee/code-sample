@@ -17,15 +17,24 @@ namespace HRM.Repository
             _context = context;
         }
 
-        public Dept GetDept(int? id)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<List<Dept>> GetDepts()
         {
             return await _context.Dept.ToListAsync();
             //throw new NotImplementedException();
+        }
+
+        public async Task<Dept> GetDept(int? id)
+        {
+            var dept = await _context.Dept
+                 .FirstOrDefaultAsync(m => m.Id == id);
+
+            return dept;
+        }
+
+        public async Task Save(Dept dept)
+        {
+            _context.Add(dept);
+            await _context.SaveChangesAsync();
         }
     }
 }

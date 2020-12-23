@@ -37,8 +37,9 @@ namespace HRM.Controllers
                 return NotFound();
             }
 
-            var dept = await _context.Dept
-                .FirstOrDefaultAsync(m => m.Id == id);
+            //var dept = await _context.Dept
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+            var dept = await _deptService.GetDept(id);
             if (dept == null)
             {
                 return NotFound();
@@ -62,8 +63,9 @@ namespace HRM.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(dept);
-                await _context.SaveChangesAsync();
+                //_context.Add(dept);
+                //await _context.SaveChangesAsync();
+                await _deptService.Add(dept);
                 return RedirectToAction(nameof(Index));
             }
             return View(dept);

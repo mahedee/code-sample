@@ -8,9 +8,10 @@ namespace HRM.Repository
 {
     public interface IDeptRepository
     {
-        //public List<Dept> GetDepts();
         public Task<List<Dept>> GetDepts();
-        public Dept GetDept(int? id);
+        public Task<Dept> GetDept(int? id);
+
+        public Task Save(Dept dept);
 
     }
 }
