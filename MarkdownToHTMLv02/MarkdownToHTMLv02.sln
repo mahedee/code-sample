@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownToHTMLv02", "MarkdownToHTMLv02\MarkdownToHTMLv02.csproj", "{AE733AAE-D437-40CF-87F8-D478C63E7BE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE733AAE-D437-40CF-87F8-D478C63E7BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE733AAE-D437-40CF-87F8-D478C63E7BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE733AAE-D437-40CF-87F8-D478C63E7BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE733AAE-D437-40CF-87F8-D478C63E7BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2983391F-73E0-40A9-8EE8-F3CDD66571AF}
+	EndGlobalSection
+EndGlobal

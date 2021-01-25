@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "TagHelper";
+}
+
+<h3>Markdown TagHelper Block</h3>
+
+<markdown normalize-whitespace="true">
+    ## This is a markdown title
+    * Item 1
+    * Item 2
+    The current Time is:
+    **@DateTime.Now.ToString("HH:mm:ss")**
+
+</markdown>
