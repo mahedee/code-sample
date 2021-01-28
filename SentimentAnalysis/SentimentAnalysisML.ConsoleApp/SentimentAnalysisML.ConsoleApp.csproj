@@ -4,13 +4,14 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <Folder Include="Data\" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.0-preview2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SentimentAnalysisML.Model\SentimentAnalysisML.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectCapability Include="ModelBuilderGenerated" />
+  </ItemGroup>
 </Project>

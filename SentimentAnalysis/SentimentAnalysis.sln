@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentimentAnalysis", "SentimentAnalysis\SentimentAnalysis.csproj", "{6BC4D26E-097A-4B56-BAE5-F48935C4FD7F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentAnalysisML.Model", "SentimentAnalysisML.Model\SentimentAnalysisML.Model.csproj", "{C9A247FF-8075-40D5-B1A0-B5786AD5A5AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentAnalysisML.ConsoleApp", "SentimentAnalysisML.ConsoleApp\SentimentAnalysisML.ConsoleApp.csproj", "{A33EA89C-0573-4116-89F2-4609F17FEFD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6BC4D26E-097A-4B56-BAE5-F48935C4FD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC4D26E-097A-4B56-BAE5-F48935C4FD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC4D26E-097A-4B56-BAE5-F48935C4FD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A247FF-8075-40D5-B1A0-B5786AD5A5AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A247FF-8075-40D5-B1A0-B5786AD5A5AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A247FF-8075-40D5-B1A0-B5786AD5A5AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A247FF-8075-40D5-B1A0-B5786AD5A5AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A33EA89C-0573-4116-89F2-4609F17FEFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A33EA89C-0573-4116-89F2-4609F17FEFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A33EA89C-0573-4116-89F2-4609F17FEFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A33EA89C-0573-4116-89F2-4609F17FEFD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
