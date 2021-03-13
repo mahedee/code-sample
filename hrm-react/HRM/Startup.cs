@@ -1,4 +1,6 @@
 using HRM.Db;
+using HRM.Repository;
+using HRM.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,10 @@ namespace HRM
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            //Register 
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using HRM.Db;
 using HRM.Models;
+using HRM.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,11 +11,11 @@ using Microsoft.EntityFrameworkCore;
 public class EmployeesController : Controller
 {
 
-    private readonly HRMContext _context;
+    private readonly IEmployeeService _employeeService;
 
-    public EmployeesController(HRMContext context)
+    public EmployeesController(IEmployeeService employeeService)
     {
-        _context = context;
+        _employeeService = employeeService;
     }
 
     [HttpGet("[action]")]
@@ -22,7 +23,7 @@ public class EmployeesController : Controller
     {
         try
         {
-             var allemployess = _context.Employees.ToListAsync();
+             var allemployess = _employeeService.GetEmployees();
              return Ok(allemployess);
         }
         catch(Exception exp)
