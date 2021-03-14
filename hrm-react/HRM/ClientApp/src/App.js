@@ -7,6 +7,8 @@ import { Counter } from './components/Counter';
 
 import './custom.css'
 
+import {Employees} from './components/Employee/Employees';
+
 export default class App extends Component {
   static displayName = App.name;
 
@@ -14,6 +16,7 @@ export default class App extends Component {
     return (
       <Layout>
         <Route exact path='/' component={Home} />
+        <Route path='/employees' component={Employees} />
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
       </Layout>
