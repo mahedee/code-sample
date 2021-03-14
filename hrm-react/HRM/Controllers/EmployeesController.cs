@@ -23,7 +23,7 @@ public class EmployeesController : Controller
     {
         try
         {
-             var allemployess = _employeeService.GetEmployees();
+             var allemployess = await _employeeService.GetEmployees();
              return Ok(allemployess);
         }
         catch(Exception exp)
@@ -33,20 +33,68 @@ public class EmployeesController : Controller
         //return await _context.Employees.ToListAsync();
     }
 
-    // [HttpGet("[action]")]
-    // public IActionResult GetEmployees()
-    // {
-    //     try
-    //     {
-    //         //throw new Exception();
-    //         var allemployess = _context.Employees.ToListAsync();
-    //         return Ok(allemployess);
-    //     }
-    //     catch (Exception exp)
-    //     {
-    //         return BadRequest(exp.Message);
-    //     }
+    
+    [HttpGet("Employee/{id}")]
+    public async Task<ActionResult<Employee>> GetEmployeeById(int id)
+    {
+        try
+        {
+            var employee = await _employeeService.GetEmployee(id);
+            return Ok(employee);
+        }
+        catch(Exception exp)
+        {
+            return BadRequest(exp.Message);
+        }
+    }
 
-    // }
+    [HttpPost("AddEmployee")]
+    public async Task<ActionResult> AddEmployee([FromBody]Employee employee)
+    {
+        try
+        {
+            string result = string.Empty;
+            if(employee != null)
+            {
+                result = await _employeeService.AddEmployee(employee);
+            }
+            return Ok(result);
+        }
+        catch(Exception exp)
+        {
+            return BadRequest(exp.Message);
+            //
+        }
+    }
+
+    [HttpPut("EditEmployee/{id}")]
+    public async Task<ActionResult> EditEmployee(int id, [FromBody]Employee employee)
+    {
+        try
+        {
+            string result = string.Empty;
+            result = await _employeeService.EditEmployee(id, employee);
+            return Ok(result);
+        }
+        catch(Exception exp)
+        {
+            return BadRequest(exp.Message);
+        }
+    }
+
+    [HttpDelete("DeleteEmployee/{id}")]
+    public async Task<ActionResult> DeleteEmployee(int id)
+    {
+        try
+        {
+            string result = string.Empty;
+            result = await _employeeService.RemoveEmployee(id);
+            return Ok(result);
+        }
+        catch(Exception exp)
+        {
+            return BadRequest(exp.Message);
+        }
+    }
 
 }

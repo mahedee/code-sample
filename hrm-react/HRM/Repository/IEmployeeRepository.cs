@@ -11,7 +11,6 @@ namespace HRM.Repository
         public Task<Employee> SelectEmployee(int id);
         public Task<string> UpdateEmployee(int id, Employee employee);
         public Task<string> SaveEmployee(Employee employee);
-         public Task<string> DeleteEmployee(int id);
-
+        public Task<string> DeleteEmployee(int id);
     }
 }
