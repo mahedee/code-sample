@@ -101,7 +101,7 @@ export class Employees extends Component
         return(
             <div>
                 <h2>Employee</h2>
-                <button onClick={()=> this.onEmployeeCreate()} className="btn btn-success">Create</button>
+                <button onClick={()=> this.onEmployeeCreate()} className="btn btn-primary">Create</button>
                 {content}
             </div>
         );

@@ -9,6 +9,7 @@ import './custom.css'
 
 import {Employees} from './components/Employee/Employees';
 import { Create } from './components/Employee/Create';
+import { Edit } from './components/Employee/Edit';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -19,6 +20,7 @@ export default class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/employees' component={Employees} />
         <Route path='/create' component = {Create}></Route>
+        <Route path='/Edit/:id' component = {Edit}></Route>
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
       </Layout>
