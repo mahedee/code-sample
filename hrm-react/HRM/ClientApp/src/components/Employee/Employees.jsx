@@ -9,6 +9,10 @@ export class Employees extends Component
     constructor(props){
         super(props);
 
+        this.OnEmployeeEdit = this.OnEmployeeEdit.bind(this);
+        this.OnEmployeeDelete = this.OnEmployeeDelete.bind(this);
+        this.onEmployeeCreate = this.onEmployeeCreate.bind(this);
+
         this.state = {
             employees: [],
             loading: true,
@@ -22,6 +26,25 @@ export class Employees extends Component
 
     componentDidMount(){
         this.populateEmployeesData();
+    }
+
+    // Event handler for create button
+    onEmployeeCreate()
+    {
+        const {history} = this.props;
+        history.push('/create');
+    }
+
+    // Event handler for edit button
+    OnEmployeeEdit(id){
+        const {history} = this.props;
+        history.push('/edit/'+id);
+    }
+
+    // Event handler for delete button
+    OnEmployeeDelete(id){
+        const {history} = this.props;
+        history.push('/delete/'+id);
     }
 
     populateEmployeesData(){
@@ -43,7 +66,7 @@ export class Employees extends Component
                         <th>Father's Name</th>
                         <th>Mother's Name</th>
                         <th>Date of Birth</th>
-                        <th>Action</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,7 +78,8 @@ export class Employees extends Component
                                 <td>{employee.fathersName}</td>
                                 <td>{employee.mothersName}</td>
                                 <td>{ new Date(employee.dateOfBirth).toISOString().slice(0,10)}</td>
-                                <td>---</td>
+                                <td><button onClick={()=> this.OnEmployeeEdit(employee.id)}  className= "btn btn-success">Edit</button> || 
+                                <button onClick={()=> this.OnEmployeeDelete(employee.id)} className= "btn btn-danger">Delete</button></td>
                             </tr>
                         ))
                     }
@@ -76,7 +100,8 @@ export class Employees extends Component
 
         return(
             <div>
-                <h1>All Employees</h1>
+                <h2>Employee</h2>
+                <button onClick={()=> this.onEmployeeCreate()} className="btn btn-success">Create</button>
                 {content}
             </div>
         );
