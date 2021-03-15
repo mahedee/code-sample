@@ -5,7 +5,15 @@ export class Edit extends Component {
     constructor(props) {
         super(props);
 
+        this.onChangeName = this.onChangeName.bind(this);
+        this.onChangeDesignation = this.onChangeDesignation.bind(this);
+        this.onChangeFathersName = this.onChangeFathersName.bind(this);
+        this.onChangeMothersName = this.onChangeMothersName.bind(this);
+        this.onChangeDOB = this.onChangeDOB.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+
         this.state = {
+            id : '',
             name: '',
             designation: '',
             fathersName: '',
@@ -20,6 +28,7 @@ export class Edit extends Component {
         axios.get("api/Employees/Employee/" + id).then(employee =>{
             const response = employee.data;
             this.setState({
+                id : response.id,
                 name: response.name,
                 designation: response.designation,
                 fathersName: response.fathersName,
@@ -33,39 +42,58 @@ export class Edit extends Component {
     onChangeName(e) {
         this.setState({
             name: e.target.value
-        })
+        });
     }
 
     onChangeDesignation(e) {
         this.setState({
             designation: e.target.value
-        })
+        });
     }
 
     onChangeFathersName(e) {
         this.setState({
             fathersName: e.target.value
-        })
+        });
 
     }
 
     onChangeMothersName(e) {
         this.setState({
             mothersName: e.target.value
-        })
+        });
 
     }
 
     onChangeDOB(e) {
         this.setState({
             dateOfBirth: e.target.value
-        })
+        });
     }
 
 
     onUpdateCancel(){
         const {history} = this.props;
         history.push('/employees');
+    }
+
+    onSubmit(e){
+       
+        e.preventDefault();
+        const {history} = this.props;
+        const {id} = this.props.match.params;
+        let employeeObj = {
+            id: this.state.id,
+            name: this.state.name,
+            designation: this.state.designation,
+            fathersName: this.state.fathersName,
+            mothersName: this.state.mothersName,
+            dateOfBirth: new Date(this.state.dateOfBirth).toISOString()
+        }
+
+        axios.put("api/Employees/EditEmployee/"+id, employeeObj).then(result => {
+            history.push('/employees');
+        })
     }
 
     render() {
