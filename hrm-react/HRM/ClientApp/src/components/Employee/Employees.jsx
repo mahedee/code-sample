@@ -6,7 +6,10 @@ import axios from 'axios';
 
 export class Employees extends Component
 {
+    //“Props” is a special keyword in React, which stands for properties and is being used for passing data from one component to another.
     constructor(props){
+
+        //If you do not call super(props) method, this. props will be undefined 
         super(props);
 
         this.OnEmployeeEdit = this.OnEmployeeEdit.bind(this);
@@ -48,6 +51,7 @@ export class Employees extends Component
     }
 
     populateEmployeesData(){
+        // Axios is a library that helps us make http requests to external resources
         axios.get("api/Employees/GetEmployees").then(result => {
             const response = result.data;
             this.setState({employees: response, loading: false, error: ""});
