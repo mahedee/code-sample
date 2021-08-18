@@ -1,0 +1,89 @@
+2021-08-18 12:25:55.608 +06:00 [INF] Now listening on: http://localhost:5000
+2021-08-18 12:25:55.650 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-18 12:25:55.652 +06:00 [INF] Hosting environment: Development
+2021-08-18 12:25:55.653 +06:00 [INF] Content root path: D:\Project\Github\code-sample\SerilogSeqDemo\Catalog.API
+2021-08-18 12:25:56.598 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-08-18 12:25:56.717 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 121.6499ms
+2021-08-18 12:25:56.872 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-08-18 12:25:56.956 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.5845ms
+2021-08-18 12:26:18.607 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/WeatherForecast - -
+2021-08-18 12:26:18.643 +06:00 [INF] Executing endpoint 'Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API)'
+2021-08-18 12:26:18.659 +06:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Catalog.API.WeatherForecast] Get() on controller Catalog.API.Controllers.WeatherForecastController (Catalog.API).
+2021-08-18 12:26:18.720 +06:00 [INF] Executing action method Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API) - Validation state: "Valid"
+2021-08-18 12:26:18.727 +06:00 [INF] HTTP GET: Called get method of WeatherForecast contorller
+2021-08-18 12:26:18.735 +06:00 [INF] Executed action method Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1082ms.
+2021-08-18 12:26:18.744 +06:00 [INF] Executing ObjectResult, writing value of type 'Catalog.API.WeatherForecast[]'.
+2021-08-18 12:26:18.760 +06:00 [INF] Executed action Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API) in 89.9707ms
+2021-08-18 12:26:18.765 +06:00 [INF] Executed endpoint 'Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API)'
+2021-08-18 12:26:18.769 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/WeatherForecast - - - 200 - application/json;+charset=utf-8 161.2006ms
+2021-08-18 12:42:58.051 +06:00 [INF] Now listening on: http://localhost:5000
+2021-08-18 12:42:58.084 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-18 12:42:58.087 +06:00 [INF] Hosting environment: Development
+2021-08-18 12:42:58.089 +06:00 [INF] Content root path: D:\Project\Github\code-sample\SerilogSeqDemo\Catalog.API
+2021-08-18 12:42:58.883 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-08-18 12:42:58.987 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 106.8008ms
+2021-08-18 12:42:59.149 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-08-18 12:42:59.235 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.5739ms
+2021-08-18 12:43:19.477 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/WeatherForecast - -
+2021-08-18 12:43:19.507 +06:00 [INF] Executing endpoint 'Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API)'
+2021-08-18 12:43:19.524 +06:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Catalog.API.WeatherForecast] Get() on controller Catalog.API.Controllers.WeatherForecastController (Catalog.API).
+2021-08-18 12:43:19.568 +06:00 [INF] Executing action method Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API) - Validation state: "Valid"
+2021-08-18 12:43:19.573 +06:00 [INF] HTTP GET: Called get method of WeatherForecast contorller
+2021-08-18 12:43:19.579 +06:00 [INF] Executed action method Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.2639ms.
+2021-08-18 12:43:19.586 +06:00 [INF] Executing ObjectResult, writing value of type 'Catalog.API.WeatherForecast[]'.
+2021-08-18 12:43:19.599 +06:00 [INF] Executed action Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API) in 66.7185ms
+2021-08-18 12:43:19.603 +06:00 [INF] Executed endpoint 'Catalog.API.Controllers.WeatherForecastController.Get (Catalog.API)'
+2021-08-18 12:43:19.605 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/WeatherForecast - - - 200 - application/json;+charset=utf-8 128.1798ms
+2021-08-18 12:55:14.981 +06:00 [INF] Now listening on: http://localhost:5000
+2021-08-18 12:55:15.014 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-18 12:55:15.015 +06:00 [INF] Hosting environment: Development
+2021-08-18 12:55:15.017 +06:00 [INF] Content root path: D:\Project\Github\code-sample\SerilogSeqDemo\Catalog.API
+2021-08-18 12:55:15.911 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-08-18 12:55:16.016 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 108.8526ms
+2021-08-18 12:55:16.181 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-08-18 12:55:16.256 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.0586ms
+2021-08-18 12:55:27.744 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Catalog/1/5 - -
+2021-08-18 12:55:27.780 +06:00 [INF] Executing endpoint 'Catalog.API.Controllers.CatalogController.GetItem (Catalog.API)'
+2021-08-18 12:55:27.803 +06:00 [INF] Route matched with {action = "GetItem", controller = "Catalog"}. Executing controller action with signature System.String GetItem(Int32, Int32) on controller Catalog.API.Controllers.CatalogController (Catalog.API).
+2021-08-18 12:55:27.857 +06:00 [INF] Executing action method Catalog.API.Controllers.CatalogController.GetItem (Catalog.API) - Validation state: "Valid"
+2021-08-18 12:55:39.728 +06:00 [INF] Executed action method Catalog.API.Controllers.CatalogController.GetItem (Catalog.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11861.0821ms.
+2021-08-18 12:55:39.736 +06:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-18 12:55:39.744 +06:00 [INF] Executed action Catalog.API.Controllers.CatalogController.GetItem (Catalog.API) in 11928.1262ms
+2021-08-18 12:55:39.747 +06:00 [INF] Executed endpoint 'Catalog.API.Controllers.CatalogController.GetItem (Catalog.API)'
+2021-08-18 12:55:39.749 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Catalog/1/5 - - - 200 - text/plain;+charset=utf-8 12004.9881ms
+2021-08-18 13:05:21.847 +06:00 [INF] Now listening on: http://localhost:5000
+2021-08-18 13:05:21.879 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-18 13:05:21.882 +06:00 [INF] Hosting environment: Development
+2021-08-18 13:05:21.884 +06:00 [INF] Content root path: D:\Project\Github\code-sample\SerilogSeqDemo\Catalog.API
+2021-08-18 13:05:22.699 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-08-18 13:05:22.796 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 99.7937ms
+2021-08-18 13:05:22.962 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-08-18 13:05:23.043 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 79.8568ms
+2021-08-18 13:05:37.322 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Catalog/1/111 - -
+2021-08-18 13:05:37.354 +06:00 [INF] Executing endpoint 'Catalog.API.Controllers.CatalogController.GetItem (Catalog.API)'
+2021-08-18 13:05:37.377 +06:00 [INF] Route matched with {action = "GetItem", controller = "Catalog"}. Executing controller action with signature System.String GetItem(Int32, Int32) on controller Catalog.API.Controllers.CatalogController (Catalog.API).
+2021-08-18 13:05:37.435 +06:00 [INF] Executing action method Catalog.API.Controllers.CatalogController.GetItem (Catalog.API) - Validation state: "Valid"
+2021-08-18 13:06:10.314 +06:00 [INF] Stock quantity 25 is lower than requested quantity 111
+2021-08-18 13:06:13.373 +06:00 [INF] Executed action method Catalog.API.Controllers.CatalogController.GetItem (Catalog.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 35917.4948ms.
+2021-08-18 13:06:13.390 +06:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-18 13:06:13.399 +06:00 [INF] Executed action Catalog.API.Controllers.CatalogController.GetItem (Catalog.API) in 36010.5946ms
+2021-08-18 13:06:13.402 +06:00 [INF] Executed endpoint 'Catalog.API.Controllers.CatalogController.GetItem (Catalog.API)'
+2021-08-18 13:06:13.405 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Catalog/1/111 - - - 200 - text/plain;+charset=utf-8 36083.2693ms
+2021-08-18 13:15:04.770 +06:00 [INF] Now listening on: http://localhost:5000
+2021-08-18 13:15:04.802 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-18 13:15:04.805 +06:00 [INF] Hosting environment: Development
+2021-08-18 13:15:04.806 +06:00 [INF] Content root path: D:\Project\Github\code-sample\SerilogSeqDemo\Catalog.API
+2021-08-18 13:15:05.601 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-08-18 13:15:05.703 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 104.8699ms
+2021-08-18 13:15:05.865 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-08-18 13:15:05.954 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.1055ms
+2021-08-18 13:15:17.479 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Catalog/1/110 - -
+2021-08-18 13:15:17.510 +06:00 [INF] Executing endpoint 'Catalog.API.Controllers.CatalogController.GetItem (Catalog.API)'
+2021-08-18 13:15:17.532 +06:00 [INF] Route matched with {action = "GetItem", controller = "Catalog"}. Executing controller action with signature System.String GetItem(Int32, Int32) on controller Catalog.API.Controllers.CatalogController (Catalog.API).
+2021-08-18 13:15:17.592 +06:00 [INF] Executing action method Catalog.API.Controllers.CatalogController.GetItem (Catalog.API) - Validation state: "Valid"
+2021-08-18 13:15:22.942 +06:00 [INF] Stock quantity 25 is lower than requested quantity 110
+2021-08-18 13:15:22.949 +06:00 [INF] Executed action method Catalog.API.Controllers.CatalogController.GetItem (Catalog.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5348.9353ms.
+2021-08-18 13:15:22.959 +06:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-18 13:15:22.967 +06:00 [INF] Executed action Catalog.API.Controllers.CatalogController.GetItem (Catalog.API) in 5424.406ms
+2021-08-18 13:15:22.973 +06:00 [INF] Executed endpoint 'Catalog.API.Controllers.CatalogController.GetItem (Catalog.API)'
+2021-08-18 13:15:22.975 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Catalog/1/110 - - - 200 - text/plain;+charset=utf-8 5496.6714ms
