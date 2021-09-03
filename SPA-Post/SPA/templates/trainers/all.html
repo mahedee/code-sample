@@ -1,0 +1,26 @@
+﻿<div>
+    <div>
+        <h2>Trainers Details</h2>
+    </div>
+</div>
+<div>
+    <div>
+        <table>
+            <tr>
+                <th>Name </th>
+                <th>Email </th>
+                <th>Venue </th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="trainer in trainers">
+                <td>{{trainer.name}}</td>
+                <td>{{trainer.email}}</td>
+                <td>{{trainer.venue}}</td>
+                <td>
+                    <a title="Delete" ng-href="/Registration/Trainers/delete/{{trainer.id}}">Delete</a>
+                    |<a title="Edit" ng-href="/Registration/Trainers/{{trainer.id}}">Edit</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

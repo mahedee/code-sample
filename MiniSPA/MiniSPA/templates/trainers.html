@@ -1,0 +1,21 @@
+﻿    <div class="row">
+        <div class="span10">
+            <h2>Instructors</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span10">
+            <table class="table table-condensed table-hover">
+                <tr>
+                    <th>Trainer Name</th>
+                    <th>Email</th>
+                    <th>Venue</th>
+                </tr>
+                <tr ng-repeat="trainer in trainers">
+                    <td>{{trainer.name}}</td>
+                    <td>{{trainer.email}}</td>
+                    <td>{{trainer.venue}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>

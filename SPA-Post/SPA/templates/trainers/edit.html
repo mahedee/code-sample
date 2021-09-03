@@ -1,0 +1,39 @@
+﻿<form name="trainerFrom" novalidate abide>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <input name="id" type="hidden" ng-model="trainer.id"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Name
+                </td>
+                <td>
+                    <input name="name" type="text" ng-model="trainer.name" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email
+                </td>
+                <td>
+                    <input name="email" type="text" ng-model="trainer.email" />
+                </td>
+            </tr>
+            <tr>
+                <td>Venue
+                </td>
+                <td>
+                    <textarea name="venue" ng-model="trainer.venue"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="width30"></td>
+                <td>
+                    <button type="submit" class="btn btn-primary" ng-click="update(trainer)" ng-disabled="trainerFrom.$invalid">Update</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

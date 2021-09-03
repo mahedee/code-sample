@@ -1,0 +1,36 @@
+﻿<form name="trainerForm" novalidate ng-submit="save(trainer)">
+    <table>
+        <tbody>
+
+            <tr>
+                <td>Trainer Name
+                </td>
+                <td>
+                    <input name="name" type="text" ng-model="trainer.name" required ng-minlength="5" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email
+                </td>
+                <td>
+                    <input name="email" type="text" ng-model="trainer.email" />
+                </td>
+            </tr>
+            <tr>
+                <td>Venue
+                </td>
+                <td>
+                    <input name="venue" type="text" ng-model="trainer.venue" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="width30"></td>
+                <td>
+                    <input type="submit" value="Save" ng-disabled="trainerForm.$invalid" />
+                    <a href="/Registration/Trainers" class="btn btn-inverse">Cancel</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

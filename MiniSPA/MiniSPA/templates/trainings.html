@@ -1,0 +1,21 @@
+﻿ <div>
+        <div>
+            <h2>Training Details</h2>
+        </div>
+    </div>
+    <div>
+        <div>
+            <table>
+                <tr>
+                    <th>Training Code</th>
+                    <th>Training Title</th>
+                    <th>Trainer Name</th>
+                </tr>
+                <tr ng-repeat="training in trainings">
+                    <td>{{training.trainingCode}}</td>
+                    <td>{{training.title}}</td>
+                    <td>{{training.trainer}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>

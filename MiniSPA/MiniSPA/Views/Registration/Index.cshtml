@@ -1,0 +1,39 @@
+﻿@model MiniSPA.Models.RegistrationVm
+
+@{
+    ViewBag.Title = "Training Regirstration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+
+@section JavascriptInHead
+{
+    <script src="~/Scripts/Application/Controllers/TrainersController.js"></script>
+    <script src="~/Scripts/Application/Controllers/TrainingsController.js"></script>
+    <script type="text/javascript">
+        registrationModule.factory('registrationData', function() {
+            return {
+                trainings: @Html.Raw(Model.Trainings),
+                trainers: @Html.Raw(Model.Trainers)
+                };
+        });
+    </script>
+}
+
+<div>
+    <div>
+        <div>
+            <div>
+                <ul>
+                    <li><span>Training Registration</span></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/Registration/Trainings">Trainings Details</a></li>
+                    <li><a href="/Registration/Trainers">Trainer Details</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ng-view></div>
+</div>

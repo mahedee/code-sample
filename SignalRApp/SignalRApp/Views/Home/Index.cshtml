@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Please entry a task</h2>
+<form name ="taskForm" id="taskformid" ng-controller="mainController">
+    Enter a Task:
+   <input name="txtTask" id="txtTask" type="text" />
+   <button ng-click="sendMessage()">Send</button>
+</form>
+
+
