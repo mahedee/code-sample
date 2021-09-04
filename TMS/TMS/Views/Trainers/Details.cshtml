@@ -1,0 +1,35 @@
+@model TMS.Models.Trainer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Trainer</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Designation</div>
+    <div class="display-field">@Model.Designation</div>
+
+    <div class="display-label">Oranizaton</div>
+    <div class="display-field">@Model.Oranizaton</div>
+
+    <div class="display-label">CreateDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.CreateDate)</div>
+
+    <div class="display-label">ModificationDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.ModificationDate)</div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">@Model.IsActive</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

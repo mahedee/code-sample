@@ -1,0 +1,83 @@
+@model IEnumerable<TMS.Models.Training>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Title
+        </th>
+        <th>
+            Venue
+        </th>
+        <th>
+            Trainer
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            StartDate
+        </th>
+        <th>
+            EndDate
+        </th>
+        <th>
+            CreateDate
+        </th>
+        <th>
+            ModificationDate
+        </th>
+        <th>
+            IsActive
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.Title
+        </td>
+        <td>
+			@item.Venue
+        </td>
+        <td>
+			@(item.Trainer == null ? "None" : item.Trainer.Name)
+        </td>
+        <td>
+			@item.Description
+        </td>
+        <td>
+			@String.Format("{0:g}", item.StartDate)
+        </td>
+        <td>
+			@String.Format("{0:g}", item.EndDate)
+        </td>
+        <td>
+			@String.Format("{0:g}", item.CreateDate)
+        </td>
+        <td>
+			@String.Format("{0:g}", item.ModificationDate)
+        </td>
+        <td>
+			@item.IsActive
+        </td>
+    </tr>
+}
+
+</table>
+
+

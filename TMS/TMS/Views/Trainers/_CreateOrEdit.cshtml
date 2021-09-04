@@ -1,0 +1,52 @@
+@model TMS.Models.Trainer
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Designation)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Designation)
+    @Html.ValidationMessageFor(model => model.Designation)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Oranizaton)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Oranizaton)
+    @Html.ValidationMessageFor(model => model.Oranizaton)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.CreateDate)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.CreateDate)
+    @Html.ValidationMessageFor(model => model.CreateDate)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ModificationDate)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ModificationDate)
+    @Html.ValidationMessageFor(model => model.ModificationDate)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IsActive)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.IsActive)
+    @Html.ValidationMessageFor(model => model.IsActive)
+</div>
+

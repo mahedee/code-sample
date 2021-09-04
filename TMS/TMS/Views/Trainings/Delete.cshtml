@@ -1,0 +1,47 @@
+@model TMS.Models.Training
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Training</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">@Model.Title</div>
+
+    <div class="display-label">Venue</div>
+    <div class="display-field">@Model.Venue</div>
+
+    <div class="display-label">Trainer</div>
+    <div class="display-field">@(Model.Trainer == null ? "None" : Model.Trainer.Name)</div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">StartDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.StartDate)</div>
+
+    <div class="display-label">EndDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.EndDate)</div>
+
+    <div class="display-label">CreateDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.CreateDate)</div>
+
+    <div class="display-label">ModificationDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.ModificationDate)</div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">@Model.IsActive</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

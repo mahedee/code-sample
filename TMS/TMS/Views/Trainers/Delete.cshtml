@@ -1,0 +1,38 @@
+@model TMS.Models.Trainer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Trainer</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Designation</div>
+    <div class="display-field">@Model.Designation</div>
+
+    <div class="display-label">Oranizaton</div>
+    <div class="display-field">@Model.Oranizaton</div>
+
+    <div class="display-label">CreateDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.CreateDate)</div>
+
+    <div class="display-label">ModificationDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.ModificationDate)</div>
+
+    <div class="display-label">IsActive</div>
+    <div class="display-field">@Model.IsActive</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+
