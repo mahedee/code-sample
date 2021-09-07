@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DecoratorPattern.CricketInstrument">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAIABAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CricketInstrument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DecoratorPattern.PackageOption">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAIAAAAAAABAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PackageOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecoratorPattern.BasePackage">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAIAAAAAAABAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BasePackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecoratorPattern.SmartPackage">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAIAAAAAAABAAAAEQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmartPackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecoratorPattern.SpecialPackage">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAIAAAAAAABAAAAEQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpecialPackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DecoratorPattern.ICricketInstrument">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICricketInstrument.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
