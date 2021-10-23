@@ -1,0 +1,47 @@
+MPLINK 4.39, Linker
+Linker Map File - Created Sat Jul 26 19:07:07 2014
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x00002e
+ .config_300000_PROGRAM.O    romdata   0x300000    program   0x000001
+ .config_300001_PROGRAM.O    romdata   0x300001    program   0x000001
+ .config_300002_PROGRAM.O    romdata   0x300002    program   0x000001
+ .config_300003_PROGRAM.O    romdata   0x300003    program   0x000001
+ .config_300005_PROGRAM.O    romdata   0x300005    program   0x000001
+ .config_300006_PROGRAM.O    romdata   0x300006    program   0x000001
+ .config_300008_PROGRAM.O    romdata   0x300008    program   0x000001
+ .config_300009_PROGRAM.O    romdata   0x300009    program   0x000001
+ .config_30000A_PROGRAM.O    romdata   0x30000a    program   0x000001
+ .config_30000B_PROGRAM.O    romdata   0x30000b    program   0x000001
+ .config_30000C_PROGRAM.O    romdata   0x30000c    program   0x000001
+ .config_30000D_PROGRAM.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00002d      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            58 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     Loop   0x00001a    program     static G:\Uncategorized\Temp\Code-Embedded\LightDance\Program.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     Loop   0x00001a    program     static G:\Uncategorized\Temp\Code-Embedded\LightDance\Program.asm
+
+

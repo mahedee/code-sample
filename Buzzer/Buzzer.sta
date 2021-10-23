@@ -1,0 +1,53 @@
+
+ROM used: 546 (2%)
+          546 (2%) including unused fragments
+
+          1 Average locations per line
+          7 Average locations per statement
+
+RAM used: 6 (0%) at main() level
+          16 (1%) worst case
+
+Stack used: 4 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   40    12  16  Buzzer.c
+  430     0   0  C:\Program Files (x86)\PICC\devices\18F4550.h
+  180    63  84  C:\Program Files (x86)\PICC\drivers\lcd.c
+----- -----
+  650    75 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     38   3   1             @delay_ms1
+0     20   2   0             @const64
+0     60   5   3   463  4.3  lcd_read_byte
+0     30   3   1   134  2.2  lcd_send_nibble
+0     54   5   3   317  4.3  lcd_send_byte
+0     88   8   3   422  4.7  lcd_init
+0     36   3   4   186  5.5  lcd_gotoxy
+0     66   6   1   272  4.1  lcd_putc
+0     92   8   1   238  3.5  MAIN
+0     28   3   0             @const92
+0     30   3   0             @const93
+
+Program metrics:
+    Functions               7
+    Statements              75
+    Comments                176
+    Volume (V)              3108
+    Difficilty (D)          28.0
+    Effort to implement (E) 86924
+    Time to implement (T)   1 hours, 20 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   8
+    Maintainability (MI)    150
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE   542  32222  
+
+
+
